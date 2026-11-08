@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wealth Audit — Financial Thinking Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0D1B3E',
+                            900: '#081327',
+                            line: '#1E2C52'
+                        },
+                        gold: {
+                            500: '#C6A15B',
+                            soft: '#C6A15B22'
+                        },
+                        ivory: '#F7F5F0',
+                        paper: '#FFFFFF',
+                        ink: '#1B2233',
+                        muted: '#5B6478',
+                        hair: '#E4E1D8'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans text-ink bg-ivory antialiased">
+    
+    <!-- Nav -->
+    <nav class="bg-navy-900 sticky top-0 z-50 border-b border-navy-line">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="font-serif font-bold text-[16px] text-ivory tracking-[0.02em] whitespace-nowrap">
+                THE WEALTH AUDIT <span class="text-gold-500">·</span> Financial Thinking Partner
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 text-[13px] text-[#B9C0D6]">
+                <a href="#models" class="hover:text-white transition-colors">Approach</a>
+                <a href="#proof" class="hover:text-white transition-colors">Track Record</a>
+                <a href="#tiers" class="hover:text-white transition-colors">Engagements</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+            </div>
+            
+            <a href="#onboarding" class="bg-gold-500 text-navy-900 px-4 py-2 rounded-sm text-[13px] font-bold tracking-wide hover:bg-[#D6B36F] transition-colors">Apply</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative bg-gradient-to-b from-navy-900 to-navy-800 text-ivory pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
+        <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full border border-navy-line opacity-50 pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="eyebrow text-gold-500 mb-4 text-[11px] font-bold tracking-[0.16em] uppercase">Financial Thinking Partner</div>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-[46px] leading-[1.18] font-bold mb-6 max-w-[760px]">
+                Your money has a strategy. Or it has a story.<br>Pick one.
+            </h1>
+            <p class="text-lg text-[#C7CCDD] mb-8 max-w-[620px] leading-relaxed">
+                Stop guessing with your money. This is a thinking partnership for anyone ready to grow and win financially — whatever your age, income, or starting point. One clear system for your entire financial life, built around you, not sold to you.
+            </p>
+            <a href="#onboarding" class="inline-block bg-gold-500 text-navy-900 px-8 py-4 rounded-sm font-bold text-sm tracking-wide hover:bg-[#D6B36F] transition-colors shadow-lg">Apply for a Discovery Call →</a>
+            
+            <div class="mt-4 text-xs text-[#8891AC]">Educational and coaching engagement · Not a SEBI-registered investment advisor · No product sales</div>
+            
+            <div class="mt-12 pt-6 border-t border-navy-line text-[11.5px] tracking-wide text-[#9AA3C0] font-medium flex flex-wrap gap-x-6 gap-y-2">
+                <span>₹78.63 Cr in client net worth currently guided</span>
+                <span class="hidden md:inline">·</span>
+                <span>100% fee-only</span>
+                <span class="hidden md:inline">·</span>
+                <span>Zero product sales</span>
+                <span class="hidden md:inline">·</span>
+                <span>A system built around you</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- UVP Grid -->
+    <section class="py-20 lg:py-24 bg-paper border-b border-hair">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-[640px] mb-12">
+                <div class="eyebrow text-gold-500 mb-2 text-[11px] font-bold tracking-[0.16em] uppercase">Why This, Not a Financial Advisor</div>
+                <h2 class="font-serif text-3xl md:text-[32px] leading-tight text-navy-800 font-bold mb-4">Six things that make this different</h2>
+                <p class="text-muted text-[15px]">Most people who call themselves financial advisors in India are distributors with a nicer word on the business card. This isn't that.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-hair border border-hair">
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">01</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">Zero conflict of interest</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">No commissions, no product shelf, no AMC or insurance ties. Income comes from an independent career, so nothing here is a sales funnel.</p>
+                </div>
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">02</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">A repeatable system, not a sales pitch</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">Every engagement follows the same disciplined process: review everything, rank by impact, fix in order, document, revisit. No guesswork, no product push.</p>
+                </div>
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">03</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">Proven at scale</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">Currently guiding clients representing ₹78.63 Cr in combined net worth. Real outcomes, not theory.</p>
+                </div>
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">04</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">Full-picture, not product-slice</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">Insurance, tax, debt architecture, estate structure, gold strategy, children's education, parents' healthcare, documentation hygiene, retirement mathematics — one system, not twelve advisors.</p>
+                </div>
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">05</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">Built for every stage</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">Whether you're drawing your first salary or managing a multi-crore portfolio, the same discipline applies — structure before optimisation, every time.</p>
+                </div>
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">06</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">The uncomfortable conversation</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">The gold scheme that's a wealth transfer to the jeweller. The endowment policy wearing an insurance costume. You're not paying for validation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mental Models -->
+    <section id="models" class="py-20 lg:py-24 bg-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-[640px] mb-12">
+                <div class="eyebrow text-gold-500 mb-2 text-[11px] font-bold tracking-[0.16em] uppercase">The Real Product</div>
+                <h2 class="font-serif text-3xl md:text-[32px] leading-tight text-navy-800 font-bold mb-4">Ten mental models, not twelve fund picks</h2>
+                <p class="text-muted text-[15px]">This is what you actually take away — frameworks that keep working long after the engagement ends.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-y-0 gap-x-0 border-t border-hair">
+                
+                <div class="flex gap-4 py-6 border-b border-hair md:pr-9">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">01</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Boring Is Beautiful</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">Wealth is built by unremarkable actions repeated without interruption. Excitement in a portfolio is a cost, not a feature.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 py-6 border-b border-hair md:pl-9 md:border-l">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">02</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Rate-Ranked Debt Attack</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">Debt isn't a feeling, it's a spreadsheet sorted by interest rate. Expensive debt dies first; cheap debt can be kept deliberately.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4 py-6 border-b border-hair md:pr-9">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">03</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Simultaneity Over Sequence</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">Conventional advice says clear debt, then invest. That wastes years of compounding. Both engines run at once, in the right ratio.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 py-6 border-b border-hair md:pl-9 md:border-l">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">04</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Debt-Free Day Is a Redeployment Event</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">The month the last loan closes, every rupee that was servicing it needs a named destination — or lifestyle inflation eats it silently.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 py-6 border-b border-hair md:pr-9">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">05</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Structural Gaps Beat Return Chasing</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">An unregistered Will is a bigger risk than 2% of underperformance. Fix the plumbing before optimising the flow.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 py-6 border-b border-hair md:pl-9 md:border-l">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">06</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">The Invest-to-Spend Ratio</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">The one number that predicts wealth: money into assets versus money into lifestyle. Most high earners are inverted and can't say why.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 py-6 border-b border-hair md:pr-9">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">07</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Illiquidity Honesty</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">Net worth on paper means little if most of it is land, house and gold. Naming that out loud is more useful than celebrating the headline figure.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 py-6 border-b border-hair md:pl-9 md:border-l">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">08</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Written Exit Levels</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">No position gets averaged down without a pre-written exit level. This converts emotional holding into a documented decision.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 py-6 border-b border-hair md:pr-9">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">09</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Insurance Is Not Investment</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">A large term cover for a fraction of what one endowment policy costs. Cover the catastrophe, invest the rest. Never blend the two.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 py-6 border-b border-hair md:pl-9 md:border-l">
+                    <div class="font-serif text-[20px] font-bold text-gold-500 min-w-[34px]">10</div>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-navy-900 mb-1">Design for Your Absence</h4>
+                        <p class="text-[13.5px] text-muted leading-relaxed">Registered Will, named executor, named guardian, correct nominations, a spouse who knows where everything is. A plan that only works while you're alive isn't a plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof / Track Record -->
+    <section id="proof" class="py-20 lg:py-24 bg-navy-900 text-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-[680px] mb-12">
+                <div class="eyebrow text-gold-500 mb-2 text-[11px] font-bold tracking-[0.16em] uppercase">The Track Record</div>
+                <h2 class="font-serif text-3xl md:text-[32px] leading-tight text-ivory font-bold mb-4">A practice built on proof, not promises</h2>
+                <p class="text-[#B9C0D6] text-[15px]">The numbers behind the practice today.</p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-navy-line border border-navy-line mb-12">
+                <div class="bg-navy-900 p-6 lg:p-7">
+                    <div class="font-serif text-[26px] font-bold text-gold-500 leading-tight mb-2">₹78.63 Cr</div>
+                    <div class="text-[12px] text-[#9AA3C0] leading-relaxed">Combined client net worth currently guided</div>
+                </div>
+                <div class="bg-navy-900 p-6 lg:p-7">
+                    <div class="font-serif text-[26px] font-bold text-gold-500 leading-tight mb-2">100%</div>
+                    <div class="text-[12px] text-[#9AA3C0] leading-relaxed">Fee-only. Zero commissions, zero product sales</div>
+                </div>
+                <div class="bg-navy-900 p-6 lg:p-7">
+                    <div class="font-serif text-[26px] font-bold text-gold-500 leading-tight mb-2">10</div>
+                    <div class="text-[12px] text-[#9AA3C0] leading-relaxed">Mental models that build your personal system</div>
+                </div>
+                <div class="bg-navy-900 p-6 lg:p-7">
+                    <div class="font-serif text-[26px] font-bold text-gold-500 leading-tight mb-2">1:1</div>
+                    <div class="text-[12px] text-[#9AA3C0] leading-relaxed">Every engagement — no templates, no cohorts</div>
+                </div>
+            </div>
+
+            <blockquote class="border-l-2 border-gold-500 pl-6 max-w-[640px]">
+                <p class="font-serif text-[22px] font-italic leading-relaxed text-ivory italic">
+                    "Wealth doesn't need excitement. It needs a system — the same one that's guided ₹78.63 Cr of real client money, built around you, not a script."
+                </p>
+                <cite class="block mt-4 font-sans font-normal text-[12px] text-[#8891AC] not-italic">— Pradeep Reddy Sama</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- The Process -->
+    <section class="py-20 lg:py-24 bg-paper border-b border-hair">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-[640px] mb-12">
+                <div class="eyebrow text-gold-500 mb-2 text-[11px] font-bold tracking-[0.16em] uppercase">The Process</div>
+                <h2 class="font-serif text-3xl md:text-[32px] leading-tight text-navy-800 font-bold mb-4">How the partnership works</h2>
+                <p class="text-muted text-[15px]">Three steps, from first conversation to a system you actually run.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-px bg-hair border border-hair">
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">Step 1</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">Apply & Qualify</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">A short application so both sides can confirm it's a fit — no cost, no obligation, no sales pressure.</p>
+                </div>
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">Step 2</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">The 360° Audit</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">A forensic review of your entire financial life, producing a written Financial Canvas with a ranked list of what to fix first.</p>
+                </div>
+                <div class="bg-paper p-8">
+                    <div class="font-serif text-[13px] text-gold-500 font-bold tracking-[0.08em] mb-3">Step 3</div>
+                    <h3 class="text-[17px] text-navy-900 font-bold mb-2.5">The System, Running</h3>
+                    <p class="text-[13.5px] text-muted leading-relaxed">A year-by-year roadmap with named milestones — and, for ongoing clients, quarterly reviews to keep it honest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fit Check -->
+    <section class="py-20 lg:py-24 bg-paper">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-[640px] mb-12">
+                <div class="eyebrow text-gold-500 mb-2 text-[11px] font-bold tracking-[0.16em] uppercase">Fit Check</div>
+                <h2 class="font-serif text-3xl md:text-[32px] leading-tight text-navy-800 font-bold mb-4">Who this is for — and who it isn't</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 border border-hair">
+                <div class="bg-paper p-8 md:p-9 border-b md:border-b-0 md:border-r border-hair">
+                    <h3 class="text-[13px] tracking-[0.08em] uppercase text-navy-900 font-bold mb-5">This is for you if</h3>
+                    <ul class="space-y-0">
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-gold-500">You're ready to build a real system for your money, whatever stage you're starting from</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-gold-500">You earn well but cannot explain where the money goes</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-gold-500">You're early in your career and want to build the right habits now, not fix them later</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-gold-500">Six SIPs, three policies, two loans, no strategy connecting them</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-gold-500">You're the first wealth-builder in your family, with no one to ask</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-gold-500">You want a partner who will disagree with you</li>
+                    </ul>
+                </div>
+                <div class="bg-[#FBFAF7] p-8 md:p-9">
+                    <h3 class="text-[13px] tracking-[0.08em] uppercase text-navy-900 font-bold mb-5">This isn't for you if</h3>
+                    <ul class="space-y-0">
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-[#B7BDC9]">You want stock tips or the next multibagger</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-[#B7BDC9]">You want someone to validate a decision you've already made</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-[#B7BDC9]">You want a quick fix, hot sector, or a guaranteed number</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-[#B7BDC9]">You're unwilling to write things down and review them</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-[#B7BDC9]">You want a product recommendation, not a system</li>
+                        <li class="relative pl-5 py-2.5 text-[14px] text-muted border-b border-hair last:border-0 before:content-['—'] before:absolute before:left-0 before:text-[#B7BDC9]">You're looking for a SEBI-registered advisor to place trades</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center font-serif italic text-[17px] text-navy-900 py-6 border-y border-hair max-w-4xl mx-auto">
+                "This isn't for everyone. It's for anyone ready to be systematic about winning with money — whatever stage you're starting from."
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiers -->
+    <section id="tiers" class="py-20 lg:py-24 bg-ivory">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-[640px] mb-12">
+                <div class="eyebrow text-gold-500 mb-2 text-[11px] font-bold tracking-[0.16em] uppercase">Engagements</div>
+                <h2 class="font-serif text-3xl md:text-[32px] leading-tight text-navy-800 font-bold mb-4">Four ways to work together</h2>
+                <p class="text-muted text-[15px]">Anchored to outcome, not hours. One correctly-avoided endowment policy or one restructured loan often pays for the engagement several times over.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-paper border border-hair p-7">
+                    <div class="text-[11px] font-bold tracking-[0.1em] text-gold-500 uppercase mb-2">Tier I</div>
+                    <h3 class="text-[18px] text-navy-900 font-bold mb-2">The 360° Audit</h3>
+                    <p class="text-[13px] text-muted mb-4 min-h-[64px]">A one-time, deep forensic review of your entire financial life. Deliverable: a written Financial Canvas with a ranked remediation list.</p>
+                    <ul class="space-y-0">
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Net worth & debt architecture</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Insurance adequacy & overlap</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Tax structure & instrument use</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Estate & nomination hygiene</li>
+                    </ul>
+                </div>
+
+                <div class="bg-paper border border-hair p-7">
+                    <div class="text-[11px] font-bold tracking-[0.1em] text-gold-500 uppercase mb-2">Tier II</div>
+                    <h3 class="text-[18px] text-navy-900 font-bold mb-2">Canvas + Roadmap</h3>
+                    <p class="text-[13px] text-muted mb-4 min-h-[64px]">Everything in the Audit, plus a year-by-year plan to a defined target with named milestone dates.</p>
+                    <ul class="space-y-0">
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Multi-decade roadmap</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Monthly commitment architecture</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Step-up schedule</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Named debt-free / milestone dates</li>
+                    </ul>
+                </div>
+
+                <div class="bg-paper border border-gold-500 p-7 relative">
+                    <div class="absolute -top-3 left-6 bg-gold-500 text-navy-900 text-[10px] font-bold tracking-[0.06em] px-2.5 py-1 uppercase">Flagship</div>
+                    <div class="text-[11px] font-bold tracking-[0.1em] text-gold-500 uppercase mb-2 mt-1">Tier III</div>
+                    <h3 class="text-[18px] text-navy-900 font-bold mb-2">Thinking Partner</h3>
+                    <p class="text-[13px] text-muted mb-4 min-h-[64px]">Ongoing partnership. Quarterly deep reviews and decision access between them. Client count capped.</p>
+                    <ul class="space-y-0">
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Quarterly deep reviews</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Between-review decision access</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Annual re-audit</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Accountability against the roadmap</li>
+                    </ul>
+                </div>
+
+                <div class="bg-paper border border-hair p-7">
+                    <div class="text-[11px] font-bold tracking-[0.1em] text-gold-500 uppercase mb-2">Tier IV</div>
+                    <h3 class="text-[18px] text-navy-900 font-bold mb-2">Family Office Lite</h3>
+                    <p class="text-[13px] text-muted mb-4 min-h-[64px]">For ₹5 Cr+ households. Multi-generational structure across parents, self, spouse and children.</p>
+                    <ul class="space-y-0">
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Succession structure</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Documentation vault</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Family financial constitution</li>
+                        <li class="py-2 border-t border-hair text-[12.5px] text-ink">Annual family review meeting</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 lg:py-24 bg-paper">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-12">
+                <div class="eyebrow text-gold-500 mb-2 text-[11px] font-bold tracking-[0.16em] uppercase">Before You Apply</div>
+                <h2 class="font-serif text-3xl md:text-[32px] leading-tight text-navy-800 font-bold mb-4">Questions worth answering upfront</h2>
+            </div>
+
+            <div class="border-t border-hair">
+                
+                <div class="border-b border-hair">
+                    <button class="w-full py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion('faq1')">
+                        <h4 class="text-[15px] font-bold text-navy-900">Is this investment advice?</h4>
+                        <i data-lucide="chevron-down" id="icon-faq1" class="w-4 h-4 text-muted transition-transform"></i>
+                    </button>
+                    <div id="faq1" class="accordion-content">
+                        <p class="text-[14px] text-muted leading-relaxed">No. This is an educational and coaching engagement — a thinking partnership focused on structure, sequencing and decision frameworks. It does not involve specific security recommendations or SEBI-registered investment advisory services.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-hair">
+                    <button class="w-full py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion('faq2')">
+                        <h4 class="text-[15px] font-bold text-navy-900">Do you sell any financial products?</h4>
+                        <i data-lucide="chevron-down" id="icon-faq2" class="w-4 h-4 text-muted transition-transform"></i>
+                    </button>
+                    <div id="faq2" class="accordion-content">
+                        <p class="text-[14px] text-muted leading-relaxed">No. No commissions, no AMC tie-ups, no distributor code, no insurance sales. Nothing recommended here generates income on the back end.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-hair">
+                    <button class="w-full py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion('faq3')">
+                        <h4 class="text-[15px] font-bold text-navy-900">How is this different from a financial advisor?</h4>
+                        <i data-lucide="chevron-down" id="icon-faq3" class="w-4 h-4 text-muted transition-transform"></i>
+                    </button>
+                    <div id="faq3" class="accordion-content">
+                        <p class="text-[14px] text-muted leading-relaxed">A distributor is paid to move product. This is a fixed-fee, outcome-anchored engagement — the incentive is a system that works, not a transaction that closes.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-hair">
+                    <button class="w-full py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion('faq4')">
+                        <h4 class="text-[15px] font-bold text-navy-900">Do I need to be a high earner to work with you?</h4>
+                        <i data-lucide="chevron-down" id="icon-faq4" class="w-4 h-4 text-muted transition-transform"></i>
+                    </button>
+                    <div id="faq4" class="accordion-content">
+                        <p class="text-[14px] text-muted leading-relaxed">No. Clients range from people just starting their career to those managing multi-crore portfolios. What matters is intent — you want to build a real system and follow it.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-hair">
+                    <button class="w-full py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion('faq5')">
+                        <h4 class="text-[15px] font-bold text-navy-900">What if my situation is complicated — business income, NRI status, agricultural land?</h4>
+                        <i data-lucide="chevron-down" id="icon-faq5" class="w-4 h-4 text-muted transition-transform"></i>
+                    </button>
+                    <div id="faq5" class="accordion-content">
+                        <p class="text-[14px] text-muted leading-relaxed">That's the normal case, not the exception. Current and past clients include founders, NRI professionals, salaried employees, and family-business second generation with exactly this kind of complexity.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-hair">
+                    <button class="w-full py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion('faq6')">
+                        <h4 class="text-[15px] font-bold text-navy-900">What happens after I apply?</h4>
+                        <i data-lucide="chevron-down" id="icon-faq6" class="w-4 h-4 text-muted transition-transform"></i>
+                    </button>
+                    <div id="faq6" class="accordion-content">
+                        <p class="text-[14px] text-muted leading-relaxed">A short qualification review, then — if it's a fit — a 30-minute discovery call to walk through your situation and recommend the right starting tier.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-hair">
+                    <button class="w-full py-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion('faq7')">
+                        <h4 class="text-[15px] font-bold text-navy-900">Why is the client list capped?</h4>
+                        <i data-lucide="chevron-down" id="icon-faq7" class="w-4 h-4 text-muted transition-transform"></i>
+                    </button>
+                    <div id="faq7" class="accordion-content">
+                        <p class="text-[14px] text-muted leading-relaxed">This runs alongside a full-time career. Scarcity here is operational, not manufactured — depth requires a small book.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Onboarding Flow -->
+    <section id="onboarding" class="bg-navy-900 text-ivory text-center py-20 lg:py-28 relative border-t-2 border-gold-500 overflow-hidden">
+        <!-- Background glows -->
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gold-soft blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="eyebrow text-gold-500 mb-4 text-[11px] font-bold tracking-[0.16em] uppercase">Client Onboarding</div>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-white">Ready to begin? Start here.</h2>
+            
+            <!-- QR Code Box -->
+            <div class="bg-white p-3 rounded-lg shadow-2xl inline-block mb-8 border border-navy-line">
+                <img src="/WhatsApp Image 2026-11-02 at 4.39.23 PM.jpeg" alt="Scan to begin" class="block w-64 max-w-full h-auto">
+            </div>
+            
+            <!-- Direct Link Button -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQ_B9KwavY2wqtfo5ouUdv5m3M3UPhAoE6IdAY9uTEhQpaQg/viewform?pli=1" target="_blank" class="block w-full max-w-sm mx-auto py-4 px-6 bg-gold-500 text-navy-900 font-bold text-[14px] tracking-wide rounded-sm hover:bg-[#D6B36F] transition-colors shadow-lg mb-12 text-center">
+                Start Your 360° Audit Form →
+            </a>
+
+            <!-- 3 Steps Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center border-t border-navy-line pt-10">
+                <div>
+                    <span class="block text-gold-500 font-serif font-bold text-2xl mb-1.5">01</span>
+                    <p class="text-[#C7CCDD] font-medium text-[14px]">Complete the form<br><span class="text-[12px] text-[#8891AC] font-normal mt-1 block">15–20 minutes</span></p>
+                </div>
+                <div>
+                    <span class="block text-gold-500 font-serif font-bold text-2xl mb-1.5">02</span>
+                    <p class="text-[#C7CCDD] font-medium text-[14px]">We confirm on WhatsApp<br><span class="text-[12px] text-[#8891AC] font-normal mt-1 block">within 1–2 working days</span></p>
+                </div>
+                <div>
+                    <span class="block text-gold-500 font-serif font-bold text-2xl mb-1.5">03</span>
+                    <p class="text-[#C7CCDD] font-medium text-[14px]">Kickoff call<br><span class="text-[12px] text-[#8891AC] font-normal mt-1 block">then your audit begins</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-line py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col gap-4">
+            <div class="text-[12px] text-[#5B6480] font-medium">The Wealth Audit — Financial Thinking Partner, by Pradeep Reddy Sama</div>
+            <div class="text-[11.5px] text-[#7C86A6] leading-[1.7] max-w-[820px]">
+                This is an educational and coaching service, not investment advisory. Pradeep Reddy Sama is not a SEBI-registered Investment Adviser and does not provide personalised investment advice, portfolio management, or specific buy/sell recommendations on securities. Content and engagements are for financial education, structuring and accountability purposes only. Nothing here should be construed as a recommendation to buy, sell, or hold any financial instrument. Please consult a SEBI-registered investment adviser for personalised investment advice.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Optionally close others
+                document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('[id^="icon-faq"]').forEach(el => el.style.transform = 'rotate(0deg)');
+                
+                content.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
